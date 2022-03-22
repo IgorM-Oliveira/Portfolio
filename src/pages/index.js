@@ -34,20 +34,20 @@ export default function Home() {
     {name : 'instagram', logo: <BsInstagram/>, href: 'https://www.instagram.com/igorm_oli/', color: '#e73170'},
     {name : 'github', logo: <BsGithub/>, href: 'https://github.com/igorm-oliveira', color: '#868488'},
     {name : 'linkedin', logo: <BsLinkedin/>, href: 'https://www.linkedin.com/in/igorm-oliveira/', color: '#0474b6'},
-    {name : 'source', logo: <BsCodeSlash/>, href: '', color: '#b4b2b2'},
+    {name : 'source', logo: <BsCodeSlash/>, href: 'https://github.com/IgorM-Oliveira/Portfolio', color: '#b4b2b2'},
   ];
 
   return (
     <div>
       <Favicon url='../public/favicon.ico' />
       <Head>
-        <title>IgorM-Oliveira</title>
+        <title>Igor M Oliveira</title>
       </Head>
 
       <Layout style={{ minHeight: '100vh' }}>
         <Header className={`navbar ${mode}`}>
           <span className={'name'}>
-            IgorM
+            Ig
           </span>
           <Menu
             className={'menu'}
@@ -83,6 +83,7 @@ export default function Home() {
         </Content>
 
         <Footer className={mode} style={{ textAlign: 'center', bottom: 0}}>
+          {/*
           <List
             grid={{ column: 4 }}
             dataSource={data}
@@ -97,6 +98,21 @@ export default function Home() {
               </List.Item>
             )}
           />
+          */}
+          <ul style={{display: 'flex', justifyContent: 'space-evenly', listStyle: 'none'}}>
+            <li>
+              <a className={`insta ${mode}`} href={'https://www.instagram.com/igorm_oli/'}>Instagram <BsInstagram/></a>
+            </li>
+            <li>
+              <a className={`git ${mode}`} href={'https://github.com/igorm-oliveira'}>GitHub <BsGithub/></a>
+            </li>
+            <li>
+              <a className={`linke ${mode}`} href={'https://www.linkedin.com/in/igorm-oliveira/'}>Linkedin <BsLinkedin/></a>
+            </li>
+            <li>
+              <a className={`source ${mode}`} href={'https://github.com/IgorM-Oliveira/Portfolio'}>Source <BsCodeSlash/></a>
+            </li>
+          </ul>
         </Footer>
       </Layout>
     </div>

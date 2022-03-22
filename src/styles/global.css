@@ -223,10 +223,6 @@ html, body {
   background-color: #e5e5e5;
 }
 
-a {
-  text-decoration: none;
-}
-
 .container {
   padding: 50px;
   position: relative;
@@ -236,4 +232,28 @@ a {
   position: absolute;
   top: 30%;
   left: 30%;
+}
+
+.dark .insta, .light .git, .dark .linke, .light .source  {
+  color: #f7f7f7;
+}
+
+.light .insta, .light .git, .light .linke, .light .source {
+  color: #08070B;
+}
+
+.insta:hover {
+  color: #e73170;
+}
+
+.git:hover {
+  color: #868488;
+}
+
+.linke:hover {
+  color: #0474b6;
+}
+
+.source:hover {
+  color: #b4b2b2;
 }
