@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
 *,
 *:before,
 *:after {
@@ -11,7 +13,7 @@ html {
 }
 
 body {
-  font-family: "Fira Code";
+  font-family: 'Lato', sans-serif;
   background-color: var(--backgroundColor);
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -19,26 +21,33 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-html, body {
-  height:100%;
-  padding-bottom: 150rem;
-  background-color: #08070B;
-}
-
 .name {
   font-size: 25px;
   font-weight: bolder;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(bottom left, #02b3f5, #05a639 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
 }
 
 .menu {
   border: none;
+}
+
+.dark {
+  color: #f7f7f7 !important;
+}
+
+.light {
+  color: #08070B;
 }
 
 .dark, .dark .menu {
@@ -47,18 +56,13 @@ html, body {
 }
 
 .light, .light .menu {
+  color: #08070B;
   background-color: #e5e5e5;
 }
 
 .container {
   padding: 50px;
   position: relative;
-}
-
-.content {
-  position: absolute;
-  top: 10%;
-  left: 30%;
 }
 
 .presentation {
@@ -89,12 +93,4 @@ html, body {
 
 .source:hover {
   color: #b4b2b2;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
 }
