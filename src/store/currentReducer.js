@@ -14,6 +14,6 @@ export const slice = createSlice({
 
 export const { changeCurrent } = slice.actions
 
-export const selectCurrent = state => state.state
+export const selectCurrent = state => state.current.state
 
 export default slice.reducer

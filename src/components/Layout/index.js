@@ -12,12 +12,13 @@ import {changeCurrent} from "../../store/currentReducer";
 import ManuComponent from "../Manu";
 import ModeComponent from "../ButtonMode";
 import FooterComponent from "../Footer";
+import {selectTheme} from "../../store/themeReducer";
 
 const { Header, Footer, Content } = Layout;
 
 const LayoutComponent = (props) => {
   const dispatch = useDispatch();
-  const mode = useSelector(state => state.theme.mode);
+  const mode = useSelector(selectTheme);
 
   const dataManu = [
     {
@@ -47,7 +48,7 @@ const LayoutComponent = (props) => {
         <title>Igor M Oliveira</title>
       </Head>
 
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout className={'layout'}>
         <Header className={`navbar ${mode}`}>
           <span className={'gradient name'}>
             <Link href="/">
@@ -57,7 +58,7 @@ const LayoutComponent = (props) => {
 
           <ManuComponent data={dataManu}/>
 
-          <span id={'mode'}>
+          <span>
             <ModeComponent />
           </span>
         </Header>
@@ -66,7 +67,7 @@ const LayoutComponent = (props) => {
           {props.children}
         </Content>
 
-        <Footer className={`footer ${mode}`}>
+        <Footer className={`footerLayout ${mode}`}>
           <FooterComponent />
         </Footer>
       </Layout>

@@ -21,15 +21,19 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.gradient {
+  background: -webkit-linear-gradient(bottom left, #02b3f5, #05a639 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .name {
   font-size: 25px;
   font-weight: bolder;
 }
 
-.gradient {
-  background: -webkit-linear-gradient(bottom left, #02b3f5, #05a639 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.menu {
+  border: none;
 }
 
 .navbar {
@@ -37,9 +41,62 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
 
-.menu {
-  border: none;
+@media (min-width: 600px)
+{
+  .title {
+    font-size: 80px !important;
+  }
+  .layout {
+    min-height: 100vh;
+  }
+  .container {
+    padding: 50px;
+    position: relative;
+  }
+  .presentation {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+  }
+  .footer {
+    font-size: 25px;
+  }
+  .paragraph {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .layout {
+    min-height: 100vh;
+  }
+
+  .container {
+    padding: 0 25px;
+  }
+
+  .menu {
+    width: 100px;
+    flex: 1;
+  }
+  .ant-layout-header {
+    padding: 0 30px;
+  }
+  .footerLayout {
+    padding: 50px 0 0 0;
+  }
+  .footer {
+    margin: 0;
+    font-size: 25px;
+  }
 }
 
 .dark {
@@ -58,17 +115,6 @@ body {
 .light, .light .menu {
   color: #08070B;
   background-color: #e5e5e5;
-}
-
-.container {
-  padding: 50px;
-  position: relative;
-}
-
-.presentation {
-  position: absolute;
-  top: 30%;
-  left: 30%;
 }
 
 .dark .insta, .light .git, .dark .linke, .light .source  {

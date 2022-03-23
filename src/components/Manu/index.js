@@ -2,12 +2,13 @@ import React from "react";
 import {Menu} from "antd";
 import Link from "next/link";
 import {useDispatch, useSelector} from "react-redux";
-import {changeCurrent} from "../../store/currentReducer";
+import {changeCurrent, selectCurrent} from "../../store/currentReducer";
+import {selectTheme} from "../../store/themeReducer";
 
 const ManuComponent = (data) => {
   const dispatch = useDispatch();
-  const mode = useSelector(state => state.theme.mode);
-  const current = useSelector(state => state.current.state);
+  const mode = useSelector(selectTheme);
+  const current = useSelector(selectCurrent);
 
   const handleClick = e => {
     dispatch(changeCurrent(e.key))
