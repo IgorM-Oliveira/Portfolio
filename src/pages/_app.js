@@ -44,7 +44,9 @@ export default function Portfolio({ Component, pageProps }) {
       <Layout style={{ minHeight: '100vh' }}>
         <Header className={`navbar ${mode}`}>
           <span className={'name'}>
-            Ig
+            <Link href="/">
+              <a onClick={() => setCurrent(null)}>Ig</a>
+            </Link>
           </span>
           <Menu
             className={'menu'}

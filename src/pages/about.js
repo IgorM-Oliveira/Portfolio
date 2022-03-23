@@ -6,7 +6,7 @@ const {Title, Paragraph} = Typography;
 export default function Home() {
   return (
     <div>
-      <div className={'about'}>
+      <div className={'content'}>
         <Title style={{color: '#f7f7f7'}}>Carreira</Title>
         <Paragraph style={{color: '#f7f7f7'}}>Front-end Developer</Paragraph>
         <Paragraph style={{color: '#f7f7f7'}}>A developer focused on helping people with their everyday problems.</Paragraph>
