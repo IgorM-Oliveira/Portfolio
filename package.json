@@ -4,6 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "export": "npm run build && next export -o _static"
   },
   "dependencies": {
@@ -29,5 +30,9 @@
   "browser": {
     "fs": false,
     "path": false
+  },
+  "devDependencies": {
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0"
   }
 }

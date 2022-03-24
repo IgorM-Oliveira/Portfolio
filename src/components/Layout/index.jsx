@@ -42,31 +42,25 @@ const LayoutComponent = (props) => {
   ]
 
   return (
-    <div>
-      <Favicon url='../../../public/favicon.ico'/>
-      <Head>
-        <title>Igor M Oliveira</title>
-      </Head>
-      <Layout className={'layout'}>
-        <Header className={`navbar ${mode}`}>
-          <span className={'gradient name'} style={{paddingRight: '25px'}}>
-            <Link href="/">
-              <a onClick={() => dispatch(changeCurrent(null))}>Ig</a>
-            </Link>
-          </span>
-          <ManuComponent data={dataManu}/>
-          <ModeComponent />
-        </Header>
+    <Layout className={'layout'}>
+      <Header className={`navbar ${mode}`}>
+        <span className={'gradient name'} style={{paddingRight: '25px'}}>
+          <Link href="/">
+            <a onClick={() => dispatch(changeCurrent(null))}>Ig</a>
+          </Link>
+        </span>
+        <ManuComponent data={dataManu}/>
+        <ModeComponent />
+      </Header>
 
-        <Content className={`container site-layout ${mode}`}>
-          {props.children}
-        </Content>
+      <Content className={`container site-layout ${mode}`}>
+        {props.children}
+      </Content>
 
-        <Footer className={`footerLayout ${mode}`}>
-          <FooterComponent />
-        </Footer>
-      </Layout>
-    </div>
+      <Footer className={`footerLayout ${mode}`}>
+        <FooterComponent />
+      </Footer>
+    </Layout>
   )
 }
 
