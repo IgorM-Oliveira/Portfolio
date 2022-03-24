@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import { Layout } from 'antd';
-import { AppstoreOutlined, DesktopOutlined, PieChartOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, DesktopOutlined, UserOutlined } from "@ant-design/icons";
 
 import {useDispatch, useSelector} from "react-redux";
 
@@ -25,7 +25,7 @@ const LayoutComponent = (props) => {
       name: 'Sobre',
       key: 'about',
       router: '/about',
-      icon: <PieChartOutlined/>
+      icon: <UserOutlined />
     },
     {
       name: 'Projetos',
@@ -47,20 +47,15 @@ const LayoutComponent = (props) => {
       <Head>
         <title>Igor M Oliveira</title>
       </Head>
-
       <Layout className={'layout'}>
         <Header className={`navbar ${mode}`}>
-          <span className={'gradient name'}>
+          <span className={'gradient name'} style={{paddingRight: '25px'}}>
             <Link href="/">
               <a onClick={() => dispatch(changeCurrent(null))}>Ig</a>
             </Link>
           </span>
-
           <ManuComponent data={dataManu}/>
-
-          <span>
-            <ModeComponent />
-          </span>
+          <ModeComponent />
         </Header>
 
         <Content className={`container site-layout ${mode}`}>

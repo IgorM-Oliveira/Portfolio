@@ -9,6 +9,7 @@
     "@ant-design/icons": "4.2.1",
     "@next/bundle-analyzer": "^9.1.4",
     "@reduxjs/toolkit": "^1.8.0",
+    "@stitches/react": "^1.2.7",
     "antd": "4.3.0",
     "cross-env": "^7.0.2",
     "dayjs": "1.8.28",

@@ -8,7 +8,7 @@ const {Title, Paragraph} = Typography;
 export default function Home() {
   const mode = useSelector(selectTheme);
   return (
-    <div>
+    <div className={'card'}>
       <div className={'presentation'}>
         <Title className={'gradient title'}>Igor Matos Oliveira</Title>
         <Paragraph className={`paragraph ${mode}`}>

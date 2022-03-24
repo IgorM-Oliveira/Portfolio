@@ -47,9 +47,19 @@ body {
   list-style: none;
   padding: 0;
 }
+.img {
+  margin: 0 20px 20px 0;
+  border-radius: 10px;
+}
+.bio {
+  display: flex;
+}
 
 @media (min-width: 600px)
 {
+  .description {
+    display: flex;
+  }
   .title {
     font-size: 80px !important;
   }
@@ -69,12 +79,20 @@ body {
     font-size: 25px;
   }
   .paragraph {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 600px)
 {
+  .card {
+    width: 90vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+  }
   .layout {
     min-height: 100vh;
   }
@@ -87,15 +105,22 @@ body {
     width: 100px;
     flex: 1;
   }
-  .ant-layout-header {
-    padding: 0 30px;
-  }
   .footerLayout {
     padding: 50px 0 0 0;
   }
   .footer {
     margin: 0;
     font-size: 25px;
+  }
+  .ant-layout-header {
+    padding: 20px 30px;
+  }
+  .ant-col-offset-6 {
+    margin-left: 0
+  }
+  .ant-col-12 {
+    flex: 100%;
+    max-width: 100%
   }
 }
 
