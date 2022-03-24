@@ -14,7 +14,6 @@ export default function Home() {
         <div className={'content'}>
           <Title className={`gradient ${mode}`}>Projetos</Title>
           <Paragraph className={`${mode}`}>Front-end Developer</Paragraph>
-          <Paragraph className={`${mode}`}>A developer focused on helping people with their everyday problems.</Paragraph>
         </div>
       </Col>
     </Row>
