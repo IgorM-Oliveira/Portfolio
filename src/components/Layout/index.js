@@ -6,8 +6,6 @@ import { AppstoreOutlined, DesktopOutlined, UserOutlined } from "@ant-design/ico
 
 import {useDispatch, useSelector} from "react-redux";
 
-import Head from 'next/head'
-import Favicon from 'react-favicon'
 import {changeCurrent} from "../../store/currentReducer";
 import ManuComponent from "../Manu";
 import ModeComponent from "../ButtonMode";
