@@ -16,7 +16,7 @@ const ModeComponent = () => {
   return (
     <Button
       onClick={() => changeMode({mode})}
-      shape="circle"
+      className={`button-theme ${mode}`}
       icon={mode === 'dark' ? <BsFillMoonFill/> : <BsFillSunFill/>}
     />
   )

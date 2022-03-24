@@ -12,7 +12,7 @@ export default function Home() {
     <Row>
       <Col span={12} offset={6}>
         <div className={'content'}>
-          <Title className={`${mode}`}>Projetos</Title>
+          <Title className={`gradient ${mode}`}>Projetos</Title>
           <Paragraph className={`${mode}`}>Front-end Developer</Paragraph>
           <Paragraph className={`${mode}`}>A developer focused on helping people with their everyday problems.</Paragraph>
         </div>

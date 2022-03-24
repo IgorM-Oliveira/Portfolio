@@ -27,6 +27,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.line {
+  border-bottom: #f7f7f7 solid;
+}
+
 .name {
   font-size: 25px;
   font-weight: bolder;
@@ -122,6 +126,11 @@ body {
     flex: 100%;
     max-width: 100%
   }
+}
+
+.button-theme, .button-theme:hover, .button-theme:focus {
+  border: none;
+  background: none;
 }
 
 .dark {
