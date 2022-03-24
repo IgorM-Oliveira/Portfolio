@@ -27,10 +27,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.line {
-  border-bottom: #f7f7f7 solid;
-}
-
 .name {
   font-size: 25px;
   font-weight: bolder;
@@ -59,6 +55,10 @@ body {
   display: flex;
 }
 
+.layout {
+  min-height: 100vh !important;
+}
+
 @media (min-width: 600px)
 {
   .description {
@@ -66,9 +66,6 @@ body {
   }
   .title {
     font-size: 80px !important;
-  }
-  .layout {
-    min-height: 100vh;
   }
   .container {
     padding: 50px;
@@ -83,7 +80,7 @@ body {
     font-size: 25px;
   }
   .paragraph {
-    font-size: 17px;
+    font-size: 20px !important;
   }
 }
 
@@ -96,9 +93,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center
-  }
-  .layout {
-    min-height: 100vh;
   }
 
   .container {
@@ -129,8 +123,8 @@ body {
 }
 
 .button-theme, .button-theme:hover, .button-theme:focus {
-  border: none;
-  background: none;
+  border: none !important;
+  background: none !important;
 }
 
 .dark {
@@ -141,14 +135,22 @@ body {
   color: #08070B;
 }
 
+.line, .dark .line {
+  border-bottom: #f7f7f7 solid;
+}
+
+.line, .light .line {
+  border-bottom: #08070B solid;
+}
+
 .dark, .dark .menu {
-  color: #f7f7f7;
-  background-color: #08070B;
+  color: #f7f7f7 !important;
+  background-color: #08070B !important;
 }
 
 .light, .light .menu {
-  color: #08070B;
-  background-color: #e5e5e5;
+  color: #08070B !important;
+  background-color: #e5e5e5 !important;
 }
 
 .dark .insta, .light .git, .dark .linke, .light .source  {

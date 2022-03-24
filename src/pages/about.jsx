@@ -61,13 +61,13 @@ export default function Home() {
           <div className={'description'}>
             <img className={'img'} src="https://avatars.githubusercontent.com/u/41808818?v=4" alt="Perfil" width="350"/>
             <div>
-              <Paragraph className={`paragraph ${mode}`}>Front-end Developer</Paragraph>
+              <Title level={3} className={`${mode}`}>Front-end Developer</Title>
               <Paragraph className={`paragraph ${mode}`}>
                 Me chamo Igor, tenho 21 anos, sou alguém mais estrovertivo e descontraido.
               </Paragraph>
               <Paragraph className={`paragraph ${mode}`}>
                 Sou desenvolvedor front-end, apaixonado por tecnologia. Atualmente trabalho na
-                <a className={`line ${mode}`} href={'https://www.genesis.tec.br/'}>Gênesis</a>
+                <a className={`line ${mode}`} href={'https://www.genesis.tec.br/'}> Gênesis </a>
                 e tenho e tenho 1 ano de experiência profissional, e atuo com as tecnologias:
                 HTML, CSS, JavaScript, ReactJS, VueJS e NodeJS.
               </Paragraph>
