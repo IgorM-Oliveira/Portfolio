@@ -111,14 +111,14 @@ body {
     font-size: 25px;
   }
   .ant-layout-header {
-    padding: 20px 30px;
+    padding: 20px 30px !important;
   }
   .ant-col-offset-6 {
-    margin-left: 0
+    margin-left: 0 !important;
   }
   .ant-col-12 {
-    flex: 100%;
-    max-width: 100%
+    flex: 100% !important;
+    max-width: 100% !important;
   }
 }
 
