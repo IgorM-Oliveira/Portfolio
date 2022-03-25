@@ -4,7 +4,7 @@
 
 ## Technology stack
 
-<div style="display: flex; justify-content: space-around">
+<div style="display: flex; justify-content: space-around;">
     <a href="https://redux-toolkit.js.org/">
         <img align="center" alt="Redux" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg">
         <p>Styling: Stitches</p>
@@ -24,8 +24,6 @@
 </div>
 
 ## Running locally
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
 1. Clone this repo:
 
