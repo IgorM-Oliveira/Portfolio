@@ -1,21 +1,52 @@
-# Ant Design example
+# igorm-oliveira.vercel.app
 
-This example shows how to use Next.js along with [Ant Design of React](https://ant.design). This is intended to show the integration of this UI toolkit with the Framework.
+> My personal [website](https://igorm-oliveira.vercel.app)
 
-## Deploy your own
+## Technology stack
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-ant-design)
+<div style="display: flex; justify-content: space-around">
+    <a href="https://redux-toolkit.js.org/">
+        <img align="center" alt="Redux" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg">
+        <p>Styling: Stitches</p>
+    </a>
+    <a href="https://redux-toolkit.js.org/">
+        <img align="center" alt="Stitches" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/stylus/stylus-original.svg">
+        <p>Store: Redux Toolkit</p>
+    </a>
+    <a href="https://nextjs.org/">
+        <img align="center" alt="Stitches" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-line.svg">
+        <p>Front-end: NextJS</p>
+    </a>
+    <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world">
+        <img align="center" height="40" src="https://vercel.com/button" alt="Deploy with Vercel"/>
+        <p>Deployment: Vercel</p>
+    </a>
+</div>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-ant-design&project-name=with-ant-design&repository-name=with-ant-design)
-
-## How to use
+## Running locally
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-```bash
-npx create-next-app --example with-ant-design with-ant-design-app
-# or
-yarn create next-app --example with-ant-design with-ant-design-app
+1. Clone this repo:
+
+```sh
+$ git clone https://github.com/IgorM-Oliveira/Portfolio.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+2. Then go to the project's folder:
+
+```sh
+cd Portfolio
+```
+
+3. Install all dependencies:
+
+```sh
+yarn install
+```
+
+4. Run locally:
+
+```sh
+yarn dev
+```
