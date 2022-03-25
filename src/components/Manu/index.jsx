@@ -32,13 +32,6 @@ const ManuComponent = (data) => {
           <a>{`${data.data[1].name}`}</a>
         </Link>
       </Menu.Item>
-      {/*
-      <Menu.Item key={`${data.data[2].key}`} icon={data.data[2].icon}>
-        <Link href={`${data.data[2].router}`}>
-          <a>{`${data.data[2].name}`}</a>
-        </Link>
-      </Menu.Item>
-      */}
     </Menu>
   )
 }
