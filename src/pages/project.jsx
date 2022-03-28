@@ -55,41 +55,47 @@ export default function Home() {
     }
   })
 
-  return (
-    <Row>
-      <Col span={12} offset={6}>
-        <div className={'content'}>
-          <Title className={`gradient ${mode}`}>Projetos</Title>
-          <Paragraph className={`paragraph ${mode}`}>
-            Essa página lista os principais projeto(s) que desenvolvi durante a minha jornada como programador.
-          </Paragraph>
+  const ProjectsArray = [
+    {
+      link: 'https://github.com/IgorM-Oliveira/ChallengerVueJs',
+      name: 'Encurdador de URL',
+      text: 'Um desafio de construir um encurtador de url com sistema de login, autenticação de request e modo anônimo',
+    },
+    {
+      link: 'https://github.com/IgorM-Oliveira/ChallengerNodeJs',
+      name: 'Encurdador de URL',
+      text: 'Esté é o back-end do sistema de encurtamente de url ao lado feito em NodeJS, MongoDB e JWT',
+    },
+    {
+      link: 'https://github.com/IgorM-Oliveira/TECHORT',
+      name: 'TECHORT',
+      text: 'O sistema estático é um projeto que realizei para meu TCC que consiste em HTML, CSS, JS e NodeJS praticamente puro a única adesão é bootstrap',
+    }
+  ]
 
-          <Row gutter={[16, 16]}>
+  return (
+    <Col span={12} offset={6}>
+      <div className={'content'}>
+        <Title className={`gradient ${mode}`}>Projetos</Title>
+        <Paragraph className={`paragraph ${mode}`}>
+          Essa página lista os principais projeto(s) que desenvolvi durante a minha jornada como programador.
+        </Paragraph>
+
+        <Row gutter={[16, 16]}>
+          {ProjectsArray.map((item) => (
             <Col lg={{span: 6}} sm={{span: 12}}>
-              <a href={'https://github.com/IgorM-Oliveira/ChallengerVueJs'}>
+              <a href={item.link}>
                 <CardStyled theme={mode}>
-                  <TitleStyled theme={mode}>Encurdador de URL</TitleStyled>
+                  <TitleStyled theme={mode}>{item.name}</TitleStyled>
                   <ParagraphStyled theme={mode}>
-                    Um desafio de construir um encurtador de url
-                    com sistema de login, autenticação de request e modo anônimo
+                    {item.text}
                   </ParagraphStyled>
                 </CardStyled>
               </a>
             </Col>
-            <Col lg={{span: 6}} sm={{span: 12}}>
-              <a href={'https://github.com/IgorM-Oliveira/TECHORT'}>
-                <CardStyled theme={mode}>
-                  <TitleStyled theme={mode}>TECHORT</TitleStyled>
-                  <ParagraphStyled theme={mode}>
-                    O sistema estático é um projeto que realizei para meu TCC que consiste
-                    em HTML, CSS, JS e NodeJS praticamente puro a única adesão é bootstrap
-                  </ParagraphStyled>
-                </CardStyled>
-              </a>
-            </Col>
-          </Row>
-        </div>
-      </Col>
-    </Row>
+          ))}
+        </Row>
+      </div>
+    </Col>
   )
 }

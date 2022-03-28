@@ -51,7 +51,7 @@ const LayoutComponent = (props) => {
         <ModeComponent />
       </Header>
 
-      <Content className={`container site-layout ${mode}`}>
+      <Content className={`container ${mode}`}>
         {props.children}
       </Content>
 
