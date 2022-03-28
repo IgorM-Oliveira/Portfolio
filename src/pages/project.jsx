@@ -58,12 +58,12 @@ export default function Home() {
   const ProjectsArray = [
     {
       link: 'https://github.com/IgorM-Oliveira/ChallengerVueJs',
-      name: 'Encurdador de URL',
+      name: 'Encurdador de URL Front-end',
       text: 'Um desafio de construir um encurtador de url com sistema de login, autenticação de request e modo anônimo',
     },
     {
       link: 'https://github.com/IgorM-Oliveira/ChallengerNodeJs',
-      name: 'Encurdador de URL',
+      name: 'Encurdador de URL Back-end',
       text: 'Esté é o back-end do sistema de encurtamente de url ao lado feito em NodeJS, MongoDB e JWT',
     },
     {
