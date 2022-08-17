@@ -1,9 +1,9 @@
 import React from 'react';
 import {Typography, Col} from "antd";
 import {useSelector} from "react-redux";
-import {selectTheme} from "../store/themeReducer";
+import {selectTheme} from "../../store/themeReducer.js";
 
-import { styled } from '@stitches/react';
+import { styled } from 'stitches';
 
 const {Title, Paragraph} = Typography;
 
