@@ -3,12 +3,28 @@ import {Typography, Col} from "antd";
 import {useSelector} from "react-redux";
 import {selectTheme} from "../../store/themeReducer.js";
 
-import { styled } from 'stitches';
+import {styled} from 'stitches';
 
 const {Title, Paragraph} = Typography;
 
 export default function Home() {
   const mode = useSelector(selectTheme);
+
+  function calcularDiferenca(dataInicial) {
+    const dataInicialObj = new Date(dataInicial);
+    const dataAtual = new Date();
+
+    let anos = dataAtual.getFullYear() - dataInicialObj.getFullYear();
+    let meses = dataAtual.getMonth() - dataInicialObj.getMonth();
+
+    // Se o mês da data inicial for maior que o mês atual, subtraímos 1 ano e ajustamos os meses
+    if (meses < 0) {
+      anos--;
+      meses += 12;
+    }
+
+    return {anos, meses};
+  }
 
   const Timeline = styled('p', {
     fontSize: '1em',
@@ -52,14 +68,6 @@ export default function Home() {
 
   const ExperienceArray = [
     {
-      function: 'Developer Front-end',
-      link: 'https://www.genesis.tec.br/',
-      company: 'Génesis',
-      address: 'Mato Grosso do Sul, MS',
-      dateInitial: 'Fev 2021',
-      duration: '1 anos 1 meses'
-    },
-    {
       function: 'Curso Técnico em Informática para Internet',
       link: 'https://www.ifms.edu.br/',
       company: 'Instituto Federal do Mato Grosso do Sul',
@@ -68,6 +76,35 @@ export default function Home() {
       dateEnd: 'Set 2019',
       duration: '3 anos'
     },
+    {
+      function: 'Engenharia de Software',
+      link: 'https://www.unigran.br/dourados',
+      company: 'Centro Universitário da Grande Dourados',
+      address: 'Mato Grosso do Sul, MS',
+      dateInitial: 'Fev 2020',
+      dateEnd: 'Set 2023',
+      duration: '4 anos'
+    },
+  ]
+
+  const EducationArray = [
+    {
+      function: 'Developer Front-end',
+      link: 'https://www.genesis.tec.br/',
+      company: 'Génesis',
+      address: 'Mato Grosso do Sul, MS',
+      dateInitial: 'Fev 2021',
+      dateEnd: 'Set 2022',
+      duration: `1 ano 2 meses`
+    },
+    {
+      function: 'Developer Full-stack',
+      link: 'https://www.genesis.tec.br/',
+      company: 'Génesis',
+      address: 'Mato Grosso do Sul, MS',
+      dateInitial: 'Maio 2022',
+      duration: `${calcularDiferenca('2022-05-01').anos} anos ${calcularDiferenca('2022-05-01').meses} meses`
+    },
   ]
 
   return (
@@ -75,7 +112,8 @@ export default function Home() {
       <div className={'content'}>
         <Title className={`gradient ${mode}`}>Sobre mim</Title>
         <div className={'description'}>
-          <img className={'img'} src="https://avatars.githubusercontent.com/u/41808818?v=4" alt="Perfil" width="350"/>
+          <img className={'img'} src="https://avatars.githubusercontent.com/u/41808818?v=4" alt="Perfil"
+               width="350"/>
           <div>
             <Title level={3} className={`${mode}`}>Front-end Developer</Title>
             <Paragraph className={`paragraph ${mode}`}>
@@ -101,7 +139,7 @@ export default function Home() {
 
         <div className={'bio'}>
           <div style={{width: '5px', height: '25px', background: '#03AEB4', marginRight: '20px'}}/>
-          <Title level={3} className={`${mode}`}>Experiência</Title>
+          <Title level={3} className={`${mode}`}>Escolaridade</Title>
         </div>
 
         <div>
@@ -113,7 +151,30 @@ export default function Home() {
                   {item.company}
                 </a> - {item.address}
               </Paragraph>
-              <Paragraph className={`paragraph ${mode}`}>{item.dateInitial} - {item.dateEnd ?? 'Momento atual'} • {item.duration}</Paragraph>
+              <Paragraph
+                className={`paragraph ${mode}`}>{item.dateInitial} - {item.dateEnd ?? 'Momento atual'} • {item.duration}</Paragraph>
+            </Timeline>
+          )))}
+        </div>
+
+        <br/>
+
+        <div className={'bio'}>
+          <div style={{width: '5px', height: '25px', background: '#03AEB4', marginRight: '20px'}}/>
+          <Title level={3} className={`${mode}`}>Experiência</Title>
+        </div>
+
+        <div>
+          {EducationArray.map((item => (
+            <Timeline>
+              <Title level={4} className={`${mode}`}>{item.function}</Title>
+              <Paragraph className={`paragraph ${mode}`}>
+                <a href={item.link} className={`line ${mode}`}>
+                  {item.company}
+                </a> - {item.address}
+              </Paragraph>
+              <Paragraph
+                className={`paragraph ${mode}`}>{item.dateInitial} - {item.dateEnd ?? 'Momento atual'} • {item.duration}</Paragraph>
             </Timeline>
           )))}
         </div>
