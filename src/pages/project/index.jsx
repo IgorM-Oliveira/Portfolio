@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography, Row, Col} from "antd";
 import {useSelector} from "react-redux";
-import {selectTheme} from "../store/themeReducer";
+import {selectTheme} from "../../store/themeReducer.js";
 import {styled} from "@stitches/react";
 
 const {Title, Paragraph} = Typography;
@@ -9,7 +9,7 @@ const {Title, Paragraph} = Typography;
 export default function Home() {
   const mode = useSelector(selectTheme);
 
-  const CardStyled = styled('div', {
+  const Card = styled('div', {
     padding: '20px',
     borderRadius: '10px',
     variants: {
@@ -85,12 +85,12 @@ export default function Home() {
           {ProjectsArray.map((item) => (
             <Col lg={{span: 6}} sm={{span: 12}}>
               <a href={item.link}>
-                <CardStyled theme={mode}>
+                <Card theme={mode}>
                   <TitleStyled theme={mode}>{item.name}</TitleStyled>
                   <ParagraphStyled theme={mode}>
                     {item.text}
                   </ParagraphStyled>
-                </CardStyled>
+                </Card>
               </a>
             </Col>
           ))}
