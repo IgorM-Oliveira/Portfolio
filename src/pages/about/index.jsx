@@ -117,13 +117,13 @@ export default function Home() {
           <div>
             <Title level={3} className={`${mode}`}>Front-end Developer</Title>
             <Paragraph className={`paragraph ${mode}`}>
-              Me chamo Igor, tenho 21 anos, sou alguém mais estrovertivo e descontraido.
+              Me chamo Igor, tenho 23 anos, sou alguém mais estrovertivo e descontraido.
             </Paragraph>
             <Paragraph className={`paragraph ${mode}`}>
-              Sou desenvolvedor front-end, apaixonado por tecnologia. Atualmente trabalho na
+              Sou analista de sistemas, apaixonado por tecnologia. Atualmente trabalho na
               <a className={`line ${mode}`} href={'https://www.genesis.tec.br/'}> Gênesis </a>
-              e tenho e tenho 1 ano de experiência profissional, e atuo com as tecnologias:
-              HTML, CSS, JavaScript, ReactJS, VueJS e NodeJS.
+              e tenho e tenho 3 ano de experiência profissional, atualmente mexendo com as tecnologias:
+              ReactJS, Next.js, NodeJS, Laravel, Docker.
             </Paragraph>
           </div>
         </div>
