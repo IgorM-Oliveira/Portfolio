@@ -12,7 +12,7 @@ export default function Home() {
       <div className={'presentation'}>
         <Title className={'gradient title'}>Igor Matos Oliveira</Title>
         <Paragraph className={`paragraph ${mode}`}>
-          Front-end Developer
+          Full-Stack Engineer
         </Paragraph>
         <Paragraph className={`paragraph ${mode}`}>
           A developer focused on helping people with their everyday problems.
