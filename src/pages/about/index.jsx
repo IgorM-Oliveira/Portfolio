@@ -3,30 +3,14 @@ import {Typography, Col} from "antd";
 import {useSelector} from "react-redux";
 import {selectTheme} from "../../store/themeReducer.js";
 
-import {styled} from 'stitches';
+import {styled} from '@stitches/react';
 
 const {Title, Paragraph} = Typography;
 
 export default function Home() {
   const mode = useSelector(selectTheme);
 
-  function calcularDiferenca(dataInicial) {
-    const dataInicialObj = new Date(dataInicial);
-    const dataAtual = new Date();
-
-    let anos = dataAtual.getFullYear() - dataInicialObj.getFullYear();
-    let meses = dataAtual.getMonth() - dataInicialObj.getMonth();
-
-    // Se o mês da data inicial for maior que o mês atual, subtraímos 1 ano e ajustamos os meses
-    if (meses < 0) {
-      anos--;
-      meses += 12;
-    }
-
-    return {anos, meses};
-  }
-
-  const Timeline = styled('p', {
+  const Timeline = styled('div', {
     fontSize: '1em',
     lineHeight: '1.75em',
     borderTop: '3px solid',
@@ -66,44 +50,65 @@ export default function Home() {
     }
   })
 
-  const ExperienceArray = [
+  const EducationArray = [
     {
-      function: 'Curso Técnico em Informática para Internet',
-      link: 'https://www.ifms.edu.br/',
-      company: 'Instituto Federal do Mato Grosso do Sul',
-      address: 'Mato Grosso do Sul, MS',
-      dateInitial: 'Fev 2016',
-      dateEnd: 'Set 2019',
-      duration: '3 anos'
+      function: 'Bacharelado em Engenharia de Software',
+      link: 'https://www.unigran.br/dourados',
+      company: 'Unigran',
+      address: 'Dourados, MS',
+      dateInitial: '2024',
+      duration: 'Concluído'
     },
     {
-      function: 'Engenharia de Software',
-      link: 'https://www.unigran.br/dourados',
-      company: 'Centro Universitário da Grande Dourados',
+      function: 'Técnico em Informática para Internet',
+      link: 'https://www.ifms.edu.br/',
+      company: 'IFMS - Instituto Federal de Mato Grosso do Sul',
       address: 'Mato Grosso do Sul, MS',
-      dateInitial: 'Fev 2020',
-      dateEnd: 'Set 2023',
-      duration: '4 anos'
+      dateInitial: '2020',
+      duration: 'Concluído'
     },
   ]
 
-  const EducationArray = [
+  const ExperienceArray = [
     {
-      function: 'Developer Front-end',
-      link: 'https://www.genesis.tec.br/',
-      company: 'Génesis',
-      address: 'Mato Grosso do Sul, MS',
-      dateInitial: 'Fev 2021',
-      dateEnd: 'Set 2022',
-      duration: `1 ano 2 meses`
+      function: 'Desenvolvedor Fullstack',
+      link: 'https://www.leardi.com.br/',
+      company: 'Paulo Roberto Leardi',
+      address: 'Brasil',
+      dateInitial: 'Maio 2025',
+      dateEnd: 'Abril 2026',
+      duration: '1 ano',
+      text: 'Desenvolvimento de novas funcionalidades, automações, integrações de pagamento e melhorias de performance em aplicações com Laravel, React.js, TypeScript, Docker e MySQL.'
     },
     {
-      function: 'Developer Full-stack',
+      function: 'Desenvolvedor Fullstack',
       link: 'https://www.genesis.tec.br/',
-      company: 'Génesis',
+      company: 'Gênesis Tecnologia e Inovação',
+      address: 'Dourados, MS',
+      dateInitial: 'Jan 2023',
+      dateEnd: 'Mar 2025',
+      duration: '2 anos 3 meses',
+      text: 'Implementação de funcionalidades em sistemas de automação e gestão de pessoas, manutenção de sistemas críticos, liderança técnica e adoção de React.js, Next.js, APIs REST e Docker.'
+    },
+    {
+      function: 'Desenvolvedor Front-end',
+      link: 'https://www.genesis.tec.br/',
+      company: 'Gênesis Tecnologia e Inovação',
+      address: 'Dourados, MS',
+      dateInitial: 'Fev 2021',
+      dateEnd: 'Jan 2023',
+      duration: '2 anos',
+      text: 'Automação de sistemas com Node.js e PostgreSQL, desenvolvimento com Next.js, React.js, Vue.js, Laravel e configuração de soluções para escolas, prefeituras e empresas.'
+    },
+    {
+      function: 'Desenvolvedor Front-end',
+      link: 'https://www.ifms.edu.br/',
+      company: 'IFMS - Instituto Federal de Mato Grosso do Sul',
       address: 'Mato Grosso do Sul, MS',
-      dateInitial: 'Maio 2022',
-      duration: `${calcularDiferenca('2022-05-01').anos} anos ${calcularDiferenca('2022-05-01').meses} meses`
+      dateInitial: 'Jan 2019',
+      dateEnd: 'Dez 2020',
+      duration: '2 anos',
+      text: 'Participação no desenvolvimento de protótipo de controle de estoque com emissão de NFe, atuando no frontend e backend com React, Node.js, Laravel e PostgreSQL.'
     },
   ]
 
@@ -112,18 +117,17 @@ export default function Home() {
       <div className={'content'}>
         <Title className={`gradient ${mode}`}>Sobre mim</Title>
         <div className={'description'}>
-          <img className={'img'} src="https://avatars.githubusercontent.com/u/41808818?v=4" alt="Perfil"
-               width="350"/>
+          <img className={'img'} src="https://avatars.githubusercontent.com/u/41808818?v=4" alt="Perfil"/>
           <div>
-            <Title level={3} className={`${mode}`}>Front-end Developer</Title>
+            <Title level={3} className={`${mode}`}>Engenheiro de Software | Laravel e React</Title>
             <Paragraph className={`paragraph ${mode}`}>
-              Me chamo Igor, tenho 21 anos, sou alguém mais estrovertivo e descontraido.
+              Sou desenvolvedor full-stack em Dourados, Mato Grosso do Sul, com foco em React.js no frontend e Laravel no backend.
             </Paragraph>
             <Paragraph className={`paragraph ${mode}`}>
-              Sou desenvolvedor front-end, apaixonado por tecnologia. Atualmente trabalho na
-              <a className={`line ${mode}`} href={'https://www.genesis.tec.br/'}> Gênesis </a>
-              e tenho e tenho 1 ano de experiência profissional, e atuo com as tecnologias:
-              HTML, CSS, JavaScript, ReactJS, VueJS e NodeJS.
+              Atuo na criação de soluções escaláveis, refatoração de sistemas legados, manutenção de sistemas críticos e desenvolvimento de software robusto com Node.js, Next.js, TypeScript, PostgreSQL, APIs REST e Docker.
+            </Paragraph>
+            <Paragraph className={`paragraph ${mode}`}>
+              <a className={`line ${mode}`} href={'mailto:igor.matos.oliveira.xyz@gmail.com'}>igor.matos.oliveira.xyz@gmail.com</a> · +55 (67) 99222-2332
             </Paragraph>
           </div>
         </div>
@@ -133,8 +137,10 @@ export default function Home() {
           <Title level={3} className={`${mode}`}>Bio</Title>
         </div>
         <Paragraph className={`paragraph ${mode}`}>
-          Sou alguém que gosta de se divertir codando algo novo, aprender cada dia mais,
-          sempre ser melhor que o meu eu do passado, essa é minha meta
+          Tenho experiência sólida com metodologias ágeis, colaboração com equipes multidisciplinares e entrega de valor para o negócio. Já trabalhei em integrações entre sistemas de RH, sistemas de ponto eletrônico para gestão pública e plataformas educacionais para escolas, professores e alunos.
+        </Paragraph>
+        <Paragraph className={`paragraph ${mode}`}>
+          Busco resolver problemas com excelência técnica, clareza no desenvolvimento e aprendizado contínuo.
         </Paragraph>
 
         <div className={'bio'}>
@@ -143,8 +149,8 @@ export default function Home() {
         </div>
 
         <div>
-          {ExperienceArray.map((item => (
-            <Timeline>
+          {EducationArray.map((item => (
+            <Timeline key={item.function}>
               <Title level={4} className={`${mode}`}>{item.function}</Title>
               <Paragraph className={`paragraph ${mode}`}>
                 <a href={item.link} className={`line ${mode}`}>
@@ -152,7 +158,7 @@ export default function Home() {
                 </a> - {item.address}
               </Paragraph>
               <Paragraph
-                className={`paragraph ${mode}`}>{item.dateInitial} - {item.dateEnd ?? 'Momento atual'} • {item.duration}</Paragraph>
+                className={`paragraph ${mode}`}>{item.dateEnd ? `${item.dateInitial} - ${item.dateEnd}` : item.dateInitial} • {item.duration}</Paragraph>
             </Timeline>
           )))}
         </div>
@@ -165,8 +171,8 @@ export default function Home() {
         </div>
 
         <div>
-          {EducationArray.map((item => (
-            <Timeline>
+          {ExperienceArray.map((item => (
+            <Timeline key={`${item.company}-${item.dateInitial}`}>
               <Title level={4} className={`${mode}`}>{item.function}</Title>
               <Paragraph className={`paragraph ${mode}`}>
                 <a href={item.link} className={`line ${mode}`}>
@@ -174,7 +180,8 @@ export default function Home() {
                 </a> - {item.address}
               </Paragraph>
               <Paragraph
-                className={`paragraph ${mode}`}>{item.dateInitial} - {item.dateEnd ?? 'Momento atual'} • {item.duration}</Paragraph>
+                className={`paragraph ${mode}`}>{item.dateEnd ? `${item.dateInitial} - ${item.dateEnd}` : item.dateInitial} • {item.duration}</Paragraph>
+              <Paragraph className={`paragraph ${mode}`}>{item.text}</Paragraph>
             </Timeline>
           )))}
         </div>

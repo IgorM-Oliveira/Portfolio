@@ -10,7 +10,7 @@ const FooterComponent = () => {
   return (
     <ul className={'footer'}>
       <li>
-        <a className={`insta ${mode}`} href={'https://www.instagram.com/igorm_oli/'}><BsInstagram/></a>
+        <a className={`insta ${mode}`} href={'https://www.instagram.com/igormatosoliveira__/'}><BsInstagram/></a>
       </li>
       <li>
         <a className={`git ${mode}`} href={'https://github.com/igorm-oliveira'}><BsGithub/></a>
